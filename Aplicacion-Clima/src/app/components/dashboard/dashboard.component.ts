@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClimaService } from 'src/app/services/clima.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,10 @@ export class DashboardComponent implements OnInit {
 
   ciudad: string = ''
 
-  constructor() { }
+  constructor(private climaService: ClimaService) { }
 
   ngOnInit(): void {
   }
+
 
 }
