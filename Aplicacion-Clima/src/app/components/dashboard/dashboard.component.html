@@ -6,7 +6,7 @@
         <div class="col-lg-6 mt-5">
             <input type="text"
                    [(ngModel)]="ciudad"  class="form-control form-control-lg size" placeholder="Ingrese Ciudad">
-            <button class="btn btn-primary btn-lg btn-block mt-4 size"
+            <button (click)="obtenerClima()" class="btn btn-primary btn-lg btn-block mt-4 size"
                     [disabled]="ciudad == '' " >Obtener Clima</button>
         </div>
     </div>
