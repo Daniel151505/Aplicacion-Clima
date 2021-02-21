@@ -8,6 +8,14 @@
                    [(ngModel)]="ciudad"  class="form-control form-control-lg size" placeholder="Ingrese Ciudad">
             <button (click)="obtenerClima()" class="btn btn-primary btn-lg btn-block mt-4 size"
                     [disabled]="ciudad == '' " >Obtener Clima</button>
+
+            <div class="card mt-5">
+                <div class="card-body">
+                    <p><b>Temperatura:</b></p>
+                    <p><b>Humedad:</b></p>
+                     <p><b>Clima</b></p>
+                </div>
+            </div> 
         </div>
     </div>
 </div>
