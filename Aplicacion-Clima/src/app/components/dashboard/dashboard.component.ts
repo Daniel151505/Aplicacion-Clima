@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
   humedad = 0
   clima = 0
   query = false
+  loading = false
+  mostrarError = false
 
   constructor(private climaService: ClimaService) { }
 
@@ -20,8 +22,14 @@ export class DashboardComponent implements OnInit {
   }
 
   obtenerClima(){
+    this.query = false
+    this.loading = true
     this.climaService.getClima(this.ciudad).subscribe(data => {
-
+      this.loading = false
+      this.query = true
+      this.temperatura = data.main.temp - 273
+      this.humedad = data.main.humidity
+      this.clima = data.weather[0].main
     })
  }
 
