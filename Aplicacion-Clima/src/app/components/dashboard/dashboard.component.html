@@ -8,7 +8,12 @@
                    [(ngModel)]="ciudad"  class="form-control form-control-lg size" placeholder="Ingrese Ciudad">
             <button (click)="obtenerClima()" class="btn btn-primary btn-lg btn-block mt-4 size"
                     [disabled]="ciudad == '' " >Obtener Clima</button>
-
+                    <div class="text-center mt-3">
+                        <div class="spinner-grow text-primary" role="status"></div>
+                        <div class="spinner-grow text-primary" role="status"></div>
+                        <div class="spinner-grow text-primary" role="status"></div>
+                    </div>
+                    
             <div class="card mt-5">
                 <div class="card-body">
                     <p><b>Temperatura:</b></p>
