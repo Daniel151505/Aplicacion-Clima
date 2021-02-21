@@ -5,3 +5,9 @@ input {
 .size{
     font-size: 2rem;
 }
+
+.color {
+    color: white;
+}
+
+input::placeholder { color: white; }
